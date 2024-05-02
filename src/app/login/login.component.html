@@ -1,0 +1,18 @@
+<div class="form-app">
+    <form #myForm="ngForm" (ngSubmit)="onSubmit()" style="padding: 1rem;">
+
+      <div style="height: 100%;margin-bottom: 2rem;">
+        <label for="name">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="userData.userName" required style="width: 100%;padding: 0.8rem 0;">
+      </div>
+      <div style="height: 100%;margin-bottom: 3rem;">
+        <label for="email">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="userData.password" required password style="width: 100%;padding: 0.8rem 0;">
+      </div>
+      <div style="height:100%;">
+        <button style="height: 100%; width: 100%; padding: 0.8rem 0;border-radius: 25px;" type="submit" [disabled]="!myForm.valid"> SIGN IN </button>
+      </div>
+    </form>
+  </div>
+  
+  
